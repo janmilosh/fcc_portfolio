@@ -1,0 +1,204 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$color-primary: #3835a5;
+$white: #fff;
+$grey: #dadada;
+$offwhite: #f8f8f8;
+
+body {
+  background: white url(http://res.cloudinary.com/imagine393/image/upload/v1476666217/confectionary_pltzna.png) fixed;
+  color: $color-primary;
+  padding-top: 66px;
+}
+
+.content {
+  width: 800px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  .block {
+    background: rgba($white, 0.5);
+    padding: 1px 30px 20px;
+    border-radius: 8px;
+    h1 {
+      margin-bottom: 30px;
+      color: lighten($color-primary, 20%);
+    }
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+      &:hover {
+        color: darken($color-primary, 10%);
+        text-decoration: none;
+      }
+      &:focus {
+        color: darken($color-primary, 10%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+header {
+  background: rgba($color-primary, .25);
+  background: $grey;
+  padding: 16px 0;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 2
+}
+
+h1, h2, h3, h4, p {
+  font-weight: 200;
+}
+
+h1.logo {
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+  top: -3px;
+}
+
+#about {
+  margin-top: 150px;
+  p {
+    font-size: 26px;
+  }
+}
+
+#projects {
+  margin-top: 300px;
+  p {
+  font-size: 22px;  
+  }
+  .row {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#social {
+  margin: 100px 0;
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav > li > a {
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: $color-primary;
+  &:hover {
+    background: darken($color-primary, 7%);
+  }
+  &:focus {
+    background: darken($color-primary, 10%);
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.menu-right {
+  float: right;
+}
+
+.nav {
+  margin-top: 0;
+}
+
+.nav-pills > li {
+  margin-bottom: 0px;
+}
+
+.nav > li > a {
+  width: 100px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+img {
+  position: relative;
+  z-index: 1;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+a:hover svg {
+  fill: darken($color-primary, 10%);
+}
+
+svg {
+  fill: $color-primary;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  img {
+    margin-bottom: 15px;
+  }
+
+  .content {
+    margin-top: 60px;
+  }
+
+  body {
+    background: $offwhite;
+    padding-top: 100px;
+  }
+
+  h1, h2, h3, h4, p {
+    font-weight: normal;
+  }
+
+  h1.logo {
+    text-align: center;
+  }
+
+  .menu-right {
+    width: 340px;
+    float: none;
+    margin: 10px auto 0;
+  }
+
+  .content {
+    padding: 0 15px;
+    margin: 0 auto;
+    .block {
+      background: none;
+      padding: 1px 0 20px;
+      border-radius: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav > li > a {
+    margin: 0 2px;
+    width: 95px;
+  }
+
+  .menu-right {
+    width: 302px;  
+  }
+
+  h1.logo {
+    font-size: 24px;
+  }
+}
